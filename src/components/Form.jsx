@@ -8,10 +8,10 @@ export default function Form(props) {
 
     const handleChange = (e) => {
         setInput(e.target.value);
-        // console.log(input)
+        
     }
     const handleSubmit = (event) => {
-        // console.log(input)
+        
         props.onSubmit(input);
         event.preventDefault();
     }
