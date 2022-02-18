@@ -41,15 +41,8 @@ export default function App() {
    
   }
   useEffect(() => {
-      if (!locationKey || locationKey.length === 0) {
-        return;
-      }
-      getWeather();
-      setLoading(false)
-    }, [locationKey])
-    
 
-  const getWeather = async () => {
+        const getWeather = async () => {
     const weatherUrl = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/"
     const apiKey = "?apikey=Ak6FclN0CVLAPyBwgJxiFhTeFQLIGIRV"
     const totalWeatherUrl = weatherUrl + locationKey + apiKey
@@ -65,6 +58,16 @@ export default function App() {
     setForecast(true);
     return;
   }
+
+      if (!locationKey || locationKey.length === 0) {
+        return;
+      }
+      getWeather();
+      setLoading(false)
+    }, [locationKey])
+    
+
+
   
   return (
     <div className='App'>
