@@ -23,7 +23,7 @@ export default function App() {
     setForecast(false)
     setLoading(true)
 
-    let locationUrl = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=Ak6FclN0CVLAPyBwgJxiFhTeFQLIGIRV&q="
+    let locationUrl = "https://dataservice.accuweather.com/locations/v1/cities/search?apikey=Ak6FclN0CVLAPyBwgJxiFhTeFQLIGIRV&q="
     let locationKeyUrl = locationUrl + input
     
     const res  = await axios.get(locationKeyUrl)
@@ -43,7 +43,7 @@ export default function App() {
   useEffect(() => {
 
         const getWeather = async () => {
-    const weatherUrl = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/"
+    const weatherUrl = "https://dataservice.accuweather.com/forecasts/v1/daily/1day/"
     const apiKey = "?apikey=Ak6FclN0CVLAPyBwgJxiFhTeFQLIGIRV"
     const totalWeatherUrl = weatherUrl + locationKey + apiKey
     console.log(locationKey)
