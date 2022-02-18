@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 
 export default function Weather(props) {
     const [temperature, setTemperature] = useState("");
-    const [icon, setIcon] = useState("");
     const [phrase, setPhrase] = useState("");
 
     useEffect(() => {
@@ -15,7 +14,6 @@ export default function Weather(props) {
         let data = JSON.parse(props.weatherInfo)
         console.log(data[0])
         setTemperature(data[0].Temperature.Maximum.Value)
-        setIcon(data[0].Day.Icon)
         setPhrase(data[0].Day.IconPhrase)
         
     },[props.weatherInfo])
