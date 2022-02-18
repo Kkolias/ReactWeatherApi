@@ -2,6 +2,8 @@
 
 Main focus fetching data from api and using functional react components
 
+Test this app: https://agitated-shirley-9ab98d.netlify.app/
+
 ## Pictures of app
 
 ### Overview of the app
